@@ -18,7 +18,7 @@ class SessionsController < ApplicationController
 	def destroy
 		logout
 	end
-	
+
 	private
 	def user_params
 		params.require(:user).permit(:email, :password)
