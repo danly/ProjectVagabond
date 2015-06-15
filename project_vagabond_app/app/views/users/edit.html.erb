@@ -1,0 +1,29 @@
+<h1> Update User info</h1>
+
+<%= form_for @user do |f| %>
+	<div><%= f.text_field :first_name, placeholder: 'First Name' %>
+	</div>
+	<div>
+		<%= f.text_field :last_name, placeholder: 'Last Name' %>
+	</div>
+	<div>
+		<%= f.email_field :email, placeholder: 'Email (username)' %>
+
+	</div>
+	<div>
+	 	<%= f.text_field :current_city, placeholder: 'Current City' %>
+
+	</div>
+	<hr>
+	<h4>Optional... muthalickah</h4>
+	<div>
+		<%= f.password_field :password, placeholder: 'Password' %>
+	</div>
+	<div>
+		<%= f.password_field :password_confirmation, placeholder: 'Confirm Password' %>
+
+	</div>
+	<div>
+		<%= f.submit %>
+	</div>
+<% end %>
