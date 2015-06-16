@@ -3,12 +3,12 @@
 
 <% @cities.each do |city|  %>
 <div>
-	<%= link_to(city) do %>
- 	Name: <%= city.city%>
-	<br>
-	Population: <%= city.population %>
-	<hr>
-	<br>
-</div>      
+	Name: <%= link_to(city) do %>
+ 	<%= city.city%>
 	<% end %>
+  <br>
+  Population: <%= city.population %>
+  <hr>
+  <br>
+</div>      
 <% end %>
