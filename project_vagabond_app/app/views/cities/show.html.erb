@@ -6,3 +6,13 @@
 	<br>
 	<%= image_tag(@city.picture) %>
 </div>      
+
+
+<% @logs.each do |log| %>
+    <div>
+  <% if log.city == @city.city %>
+      <h3><%= log.title %></h3><br>
+      <%= log.body %>
+    </div>
+  <% end %>
+<% end %>
