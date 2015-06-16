@@ -1,3 +1,13 @@
-Welcome, <%= @user.first_name %>.  How is the weather in <%= @user.current_city %>?
+<br>
+<div class="container">
+<div class="row">
+	<div class="col-md-4">
+		<%= image_tag(@user.picture) %>
+		</div>
+	<div class="col-md-8">
+		Welcome, <%= @user.first_name %>.  How is the weather in <%= @user.current_city %>?
+			<li><%= button_to "Edit Profile", edit_user_path(current_user), method: :get, class: "btn btn-warning" %></li>
+</div>
 
-<%= image_tag(@user.picture) %>
+</div>
+</div>

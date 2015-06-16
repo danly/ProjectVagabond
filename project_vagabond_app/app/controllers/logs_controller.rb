@@ -2,7 +2,8 @@ class LogsController < ApplicationController
   def new
     @log = Log.new
     @user = current_user
-    @city = City.find(params[:id])
+    @city = City.find_by(params[:city])
+    @current_city = @user.current_city
     render :new
   end
 
