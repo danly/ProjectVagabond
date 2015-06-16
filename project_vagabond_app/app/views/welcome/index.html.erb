@@ -5,12 +5,10 @@
 		<p>There are currently <%= @users.length %> users signed up.</p>
 		  
 		<% if current_user %>
-			<button class='ghost btn'><%= link_to "Profile", user_path(current_user), method: :get %></button>
-			<button class='ghost btn'><%= link_to "Edit", edit_user_path(current_user), method: :get %></button>
-			<button class='ghost btn'><%= link_to "Logout", logout_path, method: :delete %></button>
+			<button class='btn btn-default'><%= link_to "Logout", logout_path, method: :delete %></button>
 		<% else %>
-			<button class='ghost btn'><%= link_to "Signup", signup_path, method: :get %></button>
-			<button class='ghost btn'><%= link_to "Login", login_path %></button>
+			<button class='btn btn-default'><%= link_to "Signup", signup_path, method: :get %></button>
+			<button class='btn btn-default'><%= link_to "Login", login_path %></button>
 		<% end %>
 	</div>
 </div>
