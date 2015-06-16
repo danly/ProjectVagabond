@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'cities/index'
+
+  get 'cities/show'
+
   root to: 'welcome#index'
 
   get 'signup', to: 'users#new'
