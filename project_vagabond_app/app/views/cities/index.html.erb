@@ -1,2 +1,14 @@
-<h1>Cities#index</h1>
-<p>Find me in app/views/cities/index.html.erb</p>
+<h1>Cities</h1>
+
+
+<% @cities.each do |city|  %>
+<div>
+	<%= link_to(city) do %>
+ 	Name: <%= city.city%>
+	<br>
+	Population: <%= city.population %>
+	<hr>
+	<br>
+</div>      
+	<% end %>
+<% end %>

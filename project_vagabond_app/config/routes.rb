@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  get 'cities/index'
-
-  get 'cities/show'
 
   root to: 'welcome#index'
 
@@ -20,5 +17,9 @@ Rails.application.routes.draw do
   get 'users/:id/edit', to: 'users#edit', as: 'edit_user'
 
   patch 'users/:id', to: 'users#update'
+
+  get 'cities', to: 'cities#index', as: 'cities'
+
+  get 'cities/:id', to: 'cities#show', as: 'city'
 
 end
