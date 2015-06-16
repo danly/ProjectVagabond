@@ -24,7 +24,7 @@ Rails.application.routes.draw do
 
   get 'cities/:id/logs/new', to: "logs#new", as: "new_log"
 
-  post 'cities/:id/logs', to: "logs#create"
+  post 'cities/:id/logs', to: "logs#create", as: "new_log_form"
 
   get 'cities/:id/logs/:id', to: "logs#show", as: "log"
 
