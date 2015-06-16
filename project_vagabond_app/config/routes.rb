@@ -22,10 +22,10 @@ Rails.application.routes.draw do
 
   get 'cities/:id', to: 'cities#show', as: 'city'
 
-  get 'logs/city/new', to: "logs#new", as: "new_log"
+  get 'cities/:id/logs/new', to: "logs#new", as: "new_log"
 
-  post 'logs/city', to: "logs#create"
+  post 'cities/:id/logs', to: "logs#create"
 
-  get 'logs/city/:id', to: "logs#show", as: "log"
+  get 'cities/:id/logs/:id', to: "logs#show", as: "log"
 
 end
