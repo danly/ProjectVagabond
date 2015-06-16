@@ -10,7 +10,7 @@
 |* Thanks,
 |* Sean */
 
-(function ($, window) {
+;(function ($, window) {
 
     // test for feature support and return if failure
     
