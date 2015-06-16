@@ -1,13 +1,17 @@
-<h1>Welcome#index</h1>
+<div id="video" class="jumbotron vertical-center">
+	<div class="container">
+		<h1>Travel-Zine</h1>
 
-<p>There are currently <%= @users.length %> signed up.</p>
-  
-<!-- <% if current_user %>
-	<%= link_to "Profile", user_path(current_user), method: :get %>
-	<%= link_to "Edit", edit_user_path(current_user), method: :get %>
-	<%= link_to "Logout", logout_path, method: :delete %>
-<% else %>
-	<%= link_to "Signup", signup_path, method: :get %>
-	<%= link_to "Login", login_path %>
-<% end %> -->
+		<p>There are currently <%= @users.length %> users signed up.</p>
+		  
+		<% if current_user %>
+			<button class='ghost btn'><%= link_to "Profile", user_path(current_user), method: :get %></button>
+			<button class='ghost btn'><%= link_to "Edit", edit_user_path(current_user), method: :get %></button>
+			<button class='ghost btn'><%= link_to "Logout", logout_path, method: :delete %></button>
+		<% else %>
+			<button class='ghost btn'><%= link_to "Signup", signup_path, method: :get %></button>
+			<button class='ghost btn'><%= link_to "Login", login_path %></button>
+		<% end %>
+	</div>
+</div>
   
