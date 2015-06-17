@@ -2,7 +2,7 @@
 <div class="pagination-centered" id='login'>
 <h1> Log in </h1>
 
-	<%= form_for @user, url: '/sessions', method: 'post' do |f| %>
+	<%= bootstrap_form_for @user, url: '/sessions', method: 'post' do |f| %>
 			<%= f.email_field :email, placeholder: 'Email Address' %>
 			<%= f.password_field :password, placeholder: 'Password' %>
 			<%= f.submit "Log In", class: "btn btn-success" %>
