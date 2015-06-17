@@ -1,5 +1,5 @@
-
-<%= form_for @log, url: new_log_form_path, method: "post" do |f| %>
+<div class="col-xs-6 col-xs-offset-3">
+<%= bootstrap_form_for @log, url: new_log_form_path, method: "post" do |f| %>
 
   <div>
     <%= f.text_field :title, placeholder: "Title" %><br>
@@ -13,3 +13,4 @@
     <%= f.submit %>
 
 <% end %>
+</div>
