@@ -13,28 +13,28 @@ class LogsController < ApplicationController
   end
 
   def show
-    @log = Log.find(params[:id])
+    @log = Log.find(params[:log_id])
     render :show
   end
 
   def edit
-    @log = Log.find(params[:id])
+    @log = Log.find(params[:log_id])
     render :edit
   end
 
   def update
-    log = Log.find(params[:id])
+    log = Log.find(params[:log_id])
     log.update(log_params)
     redirect_to log_path(log)
   end
 
   def delete
     @city = City.find_by(params[:city])
-    log = Log.find(params[:id])
+    log = Log.find(params[:log_id])
     log.delete
     redirect_to city_path(@city)
   end
   def log_params
-    params.require(:log).permit(:city, :author, :body, :title)
+    params.require(:log).permit(:city, :author, :body, :title, :log_id)
   end
 end
