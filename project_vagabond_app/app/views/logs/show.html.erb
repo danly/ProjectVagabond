@@ -4,4 +4,5 @@
 
   <h4><%= @log.title %></h4> <small><%= @log.author %> <%= @log.created_at %></small><br>
   <p><%= @log.body %></p>
+  <%= button_to "Delete", delete_log_path, method: :delete, class: "btn btn-primary" %>
 

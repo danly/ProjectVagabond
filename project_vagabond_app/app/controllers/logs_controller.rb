@@ -17,8 +17,11 @@ class LogsController < ApplicationController
     render :show
   end
 
+  def delete
+    log = Log.find(params[:id])
+    log.destroy
+  end
   def log_params
     params.require(:log).permit(:city, :author, :body, :title)
-    
   end
 end
