@@ -13,7 +13,7 @@ class UsersController < ApplicationController
 
 	def show
 		@user = User.find(params[:id])
-		@logs = Log.all
+		@logs = Log.all.order("logs.created_at desc")
 		render :show
 	end
 

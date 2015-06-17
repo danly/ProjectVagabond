@@ -17,21 +17,16 @@
 			</div>
 		</div>
 	<div class="row">
-	<div class="col-md-3">
-	</div>
-		<% @logs.each do |log| %>
-    <div class="col-md-9">
-		  <% if log.author == @user.email %>
-
-		    <%= link_to [@user, log] do %>
-		      <h3><%= log.title %></h3><%= log.created_at.strftime("%m/%d/%Y") %><br>
-		      
-		      <%= log.city %><br>
-		    <% end %>
-		      <%= log.body %>
-		    </div>
-		  <% end %>
-		  <hr>
+		<div class="col-md-12">
+			<% @logs.each do |log| %>
+		  		<% if log.author == @user.email %>
+		    		<%= link_to [@user, log] do %>
+		      		<h3><%= log.title %></h3>
+		      		<%= log.created_at.strftime("%m/%d/%Y") %><br>
+		      		<%= log.city %><br>
+		    	<% end %>
+		      		<%= log.body %>
+	  		<% end %>
 		<% end %>
 	</div>
 </div>
