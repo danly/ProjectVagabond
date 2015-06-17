@@ -8,8 +8,7 @@
   </div>
 
     <%= f.hidden_field :author, :value => @user.email %>
-    <%= f.hidden_field :city, :value => @city.city %>
-  
+    <%= f.collection_select :city, @cities, :city, :city, :prompt => "Select City..."%>
 
     <%= f.submit %>
 

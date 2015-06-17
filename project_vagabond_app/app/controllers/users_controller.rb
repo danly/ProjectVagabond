@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 	def new
 		@user = User.new
+		@cities = City.all
 		render :new
 	end
 
@@ -25,6 +26,7 @@ class UsersController < ApplicationController
 
 	def edit
 		@user = User.find(params[:id])
+		@cities = City.all
 		render :edit
 	end
 
