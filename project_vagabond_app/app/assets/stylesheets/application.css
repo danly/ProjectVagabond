@@ -47,7 +47,15 @@ img {
 	left: 2.5%;
 	top: 40%;
 }
-
+#form {
+	opacity: 0.9;
+	background-color: #7ABAB1;
+	border-radius: 15px;
+}
+#form_page {
+	background-size: cover;
+	background-image: url(http://i.imgur.com/jYUPXsz.jpg);
+}
 
 
 
