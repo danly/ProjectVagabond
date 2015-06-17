@@ -28,4 +28,5 @@ Rails.application.routes.draw do
 
   get 'cities/:id/logs/:id', to: "logs#show", as: "log"
 
+  delete 'cities/:id/logs/:id', to: "logs#delete", as: 'delete_log'
 end
