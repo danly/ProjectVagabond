@@ -24,8 +24,9 @@
 		  <% if log.author == @user.email %>
 
 		    <%= link_to [@user, log] do %>
-		      <h3><%= log.title %></h3><br>
-		      <%= log.city %>
+		      <h3><%= log.title %></h3><%= log.created_at.strftime("%m/%d/%Y") %><br>
+		      
+		      <%= log.city %><br>
 		    <% end %>
 		      <%= log.body %>
 		    </div>
