@@ -26,7 +26,7 @@ Rails.application.routes.draw do
 
   post 'cities/:id/logs', to: "logs#create", as: "new_log_form"
 
-  get 'cities/:id/logs/:log_id', to: "logs#show", as: "log"
+  get 'cities/:id/logs/:log_id', to: "logs#show", as: "city_log"
 
   get 'cities/:id/logs/:log_id/edit', to: 'logs#edit', as: "edit_log"
     

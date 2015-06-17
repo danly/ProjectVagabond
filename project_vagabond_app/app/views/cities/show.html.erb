@@ -14,7 +14,7 @@
     <div>
   <% if log.city == @city.city %>
   <!-- find a better way to route the update-->
-    <%= link_to "/cities/#{@city.id}/logs/#{log.id}" do %>
+    <%= link_to [@city, log] do %>
       <h3><%= log.title %></h3><br>
     <% end %>
       <%= log.body %>
