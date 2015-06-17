@@ -37,6 +37,7 @@ img {
 }
 
 #video {
+	size: cover;
 	position: relative;
 	width: 100%;
 	min-height: 100%;
@@ -48,6 +49,8 @@ img {
 	top: 40%;
 }
 #form {
+	position: fixed;
+	top: 20%;
 	opacity: 0.9;
 	background-color: #7ABAB1;
 	border-radius: 15px;
