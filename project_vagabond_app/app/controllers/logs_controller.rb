@@ -18,8 +18,10 @@ class LogsController < ApplicationController
   end
 
   def delete
+    @city = City.find_by(params[:city])
     log = Log.find(params[:id])
-    log.destroy
+    log.delete
+    redirect_to city_path(@city)
   end
   def log_params
     params.require(:log).permit(:city, :author, :body, :title)
