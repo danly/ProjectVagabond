@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe User, :type => :model do
+<<<<<<< HEAD
 	
 	it "has a first name put into the field that does not contain spaces, numbers, or special characters" do
 		user = User.create({:first_name => "Robert"})	
@@ -21,4 +22,7 @@ RSpec.describe User, :type => :model do
 		expect(user.email).to match /@/ 
 	end
 
+=======
+  pending "add some examples to (or delete) #{__FILE__}"
+>>>>>>> 138d08da8050d06a33bcda18a9d5910028a6930d
 end
