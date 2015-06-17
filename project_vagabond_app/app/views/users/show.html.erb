@@ -2,11 +2,16 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-4">
-			<%= image_tag(@user.picture, :class => "profile-image") %>
+				<% if @user.picture == nil || "" %>
+					<%= image_tag("yunoprofilepic.jpg", :class => "profile-image") %>
+				<% else %>
+					<%= image_tag(@user.picture, :class => "profile-image") %>
+				<% end %>
+
 		</div>
 		<div class="col-md-8">
 			<h2 class="h2profile">Welcome, <%= @user.first_name %>.  How is the weather in <%= @user.current_city %>?</h2>
-				<li><%= button_to "Edit Profile", edit_user_path(current_user), method: :get, class: "btn btn-warning" %></li>
+				<%= button_to "Edit Profile", edit_user_path(current_user), method: :get, class: "btn btn-warning" %>
 		</div>
 		<div class="row">
 			&nbsp;
