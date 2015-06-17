@@ -9,7 +9,6 @@ class SessionsController < ApplicationController
 		@user = User.confirm(user_params)
 		if @user
 			login(@user)
-			redirect_to "/users/#{@user.id}"
 		else
 			redirect_to login_path #add a flash message later
 		end

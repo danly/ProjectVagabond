@@ -1,16 +1,19 @@
-<script type="text/javascript">$('#video').tubular({videoId: 'tSLlN4j2QOo'});</script>
-<div id="video" class="jumbotron vertical-center">
-	<div class="container">
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<video id="video" src="http://static-p.iuqo.com/media/home/home/video/cloud.mp4" autoplay preload="auto" loop="loop"></video></video>
+	<div>
+		<div class="col-xs-6 col-xs-offset-5" id="welcome">
 		<h1>Travel-Zine</h1>
-
-		<p>There are currently <%= @users.length %> users signed up.</p>
-		  
 		<% if current_user %>
 			<button class='btn btn-default'><%= link_to "Logout", logout_path, method: :delete %></button>
 		<% else %>
 			<button class='btn btn-default'><%= link_to "Signup", signup_path, method: :get %></button>
 			<button class='btn btn-default'><%= link_to "Login", login_path %></button>
 		<% end %>
+		</div>
 	</div>
-</div>
-  
+</body>
+</html>
