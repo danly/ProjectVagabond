@@ -1,13 +1,36 @@
 <br>
 <div class="container">
-<div class="row">
-	<div class="col-md-4">
-		<%= image_tag(@user.picture) %>
+	<div class="row">
+		<div class="col-md-4">
+			<%= image_tag(@user.picture, :class => "profile-image") %>
 		</div>
-	<div class="col-md-8">
-		Welcome, <%= @user.first_name %>.  How is the weather in <%= @user.current_city %>?
-			<li><%= button_to "Edit Profile", edit_user_path(current_user), method: :get, class: "btn btn-warning" %></li>
-</div>
+		<div class="col-md-8">
+			<h2 class="h2profile">Welcome, <%= @user.first_name %>.  How is the weather in <%= @user.current_city %>?</h2>
+				<li><%= button_to "Edit Profile", edit_user_path(current_user), method: :get, class: "btn btn-warning" %></li>
+		</div>
+		<div class="row">
+			&nbsp;
+		</div>
+		<div class="row">
+			<div class="container">
+				<h2 class="h2profile">Your Travel Logs!</h2>
+			</div>
+		</div>
+	<div class="row">
+	<div class="col-md-3">
+	</div>
+		<% @logs.each do |log| %>
+    <div class="col-md-9">
+		  <% if log.author == @user.email %>
 
-</div>
+		    <%= link_to(log) do %>
+		      <h3><%= log.title %></h3><br>
+		      <%= log.city %>
+		    <% end %>
+		      <%= log.body %>
+		    </div>
+		  <% end %>
+		  <hr>
+		<% end %>
+	</div>
 </div>
