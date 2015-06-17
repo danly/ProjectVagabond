@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 	def new
 		@user = User.new
+		@cities = City.all
 		render :new
 	end
 

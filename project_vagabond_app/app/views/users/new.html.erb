@@ -8,8 +8,7 @@
 
 		<%= f.text_field :last_name, placeholder: 'Last Name' %>
 		<%= f.email_field :email, placeholder: 'Email (username)' %>
-	 	<%= f.text_field :current_city, placeholder: 'Current City' %>
-	 	<%= f.collection_select :city, @cities, :city, :city, :prompt => "Select City..."%>
+	 	<%= f.collection_select :current_city, @cities, :city, :city, :prompt => "Select City..."%>
 	 	<%= f.text_field :picture, placeholder: 'Picture Link' %>
 		<%= f.password_field :password, placeholder: 'Password' %>
 		<%= f.password_field :password_confirmation, placeholder: 'Confirm Password' %>
