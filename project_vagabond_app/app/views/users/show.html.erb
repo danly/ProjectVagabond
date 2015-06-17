@@ -23,7 +23,7 @@
     <div class="col-md-9">
 		  <% if log.author == @user.email %>
 
-		    <%= link_to(log) do %>
+		    <%= link_to [@user, log] do %>
 		      <h3><%= log.title %></h3><br>
 		      <%= log.city %>
 		    <% end %>
