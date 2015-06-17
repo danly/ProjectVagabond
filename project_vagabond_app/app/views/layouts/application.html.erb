@@ -31,12 +31,12 @@
           <!-- NAV CONTENT AND BUTTONS -->
 			<li><%= link_to "Home", root_path, method: :get %></li>
 			
+
+    <% if current_user %>
 				<li> <%= link_to "New Log", new_log_path, method: :get %></li>
  
 			
 				<li> <%= link_to "Cities", cities_path, method: :get %></li>
-
-		<% if current_user %>
 				<li><%= link_to "Profile", user_path(current_user), method: :get %></li>
 			
 				<li><%= link_to "Logout", logout_path, method: :delete %></li>
