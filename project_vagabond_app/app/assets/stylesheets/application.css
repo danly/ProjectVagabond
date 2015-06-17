@@ -63,7 +63,12 @@ img {
 	position: relative;
 	background-image: url(http://i.imgur.com/jYUPXsz.jpg);
 }
-
+.profile-image{
+	max-height: 200px;
+	border-radius: 200px;
+	border: solid white 10px;
+	box-shadow: 10px 5px 8px #404040;
+}
 
 
 
