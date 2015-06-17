@@ -2,7 +2,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-4">
-				<% if @user.picture == nil || "" %>
+				<% if @user.picture == nil || @user.picture == "" %>
 					<%= image_tag("yunoprofilepic.jpg", :class => "profile-image") %>
 				<% else %>
 					<%= image_tag(@user.picture, :class => "profile-image") %>
