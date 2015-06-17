@@ -184,11 +184,7 @@ DEPENDENCIES
   pry-rails
   rails (= 4.2.1)
   rspec-rails (~> 3.0.0)
-<<<<<<< HEAD
   sass-rails (~> 5.0)
-=======
-  sass-rails (>= 3.2)
->>>>>>> 138d08da8050d06a33bcda18a9d5910028a6930d
   sdoc (~> 0.4.0)
   spring
   turbolinks
