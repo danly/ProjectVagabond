@@ -14,6 +14,7 @@ class LogsController < ApplicationController
 
   def show
     @log = Log.find(params[:log_id])
+    @user = current_user
     render :show
   end
 

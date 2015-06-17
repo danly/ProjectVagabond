@@ -7,7 +7,13 @@ class UsersController < ApplicationController
 	def create
 		@user = User.create(user_params)
 		login(@user)
-		redirect_to root_path
+		if @user
+			flash[:success] = "Welcome to Our App!!!"
+			redirect_to root_path
+		else
+			flash[:error] = "Invalid input"
+		end
+		
 
 	end
 

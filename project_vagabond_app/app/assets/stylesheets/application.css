@@ -52,7 +52,7 @@ img {
 	top: 40%;
 }
 #form {
-	position: fixed;
+	position: relative;
 	top: 20%;
 	opacity: 0.9;
 	background-color: #7ABAB1;
@@ -60,6 +60,7 @@ img {
 }
 #form_page {
 	background-size: cover;
+	position: relative;
 	background-image: url(http://i.imgur.com/jYUPXsz.jpg);
 }
 
