@@ -50,6 +50,7 @@ img {
 
 .profile-image{
 	max-width: 200px;
+	max-height: 200px;
 	border: solid white 5px;
 	border-radius: 200px;
 	box-shadow: 5px 8px 10px #434343;

@@ -17,8 +17,10 @@
 			</div>
 		</div>
 	<div class="row">
+	<div class="col-md-3">
+	</div>
 		<% @logs.each do |log| %>
-    <div>
+    <div class="col-md-9">
 		  <% if log.author == @user.email %>
 
 		    <%= link_to(log) do %>
