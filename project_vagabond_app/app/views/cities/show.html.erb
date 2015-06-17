@@ -5,6 +5,8 @@
 	Population: <%= @city.population %>
 	<hr>
 	<%= image_tag(@city.picture) %>
+  <hr>
+  <%= button_to "New Log", new_log_path, method: "get", class: "btn btn-success" %>
 </div>      
 
 
