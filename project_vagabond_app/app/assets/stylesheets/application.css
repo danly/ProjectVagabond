@@ -53,14 +53,18 @@ img {
 }
 #form {
 	position: relative;
-	top: 20%;
+	max-height: 50%;
 	opacity: 0.9;
 	background-color: #7ABAB1;
 	border-radius: 15px;
 }
 #form_page {
 	background-size: cover;
-	position: relative;
+	position: fixed;
+	top: 0;
+	left: 0;
+	min-height: 100%;
+	min-width: 100%;
 	background-image: url(http://i.imgur.com/jYUPXsz.jpg);
 }
 
