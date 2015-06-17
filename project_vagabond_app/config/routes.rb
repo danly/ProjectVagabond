@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   get 'users/:id', to: 'users#show', as: 'user'
 
+  get 'users/:id/logs', to: 'users#show', as: 'user_log'
+  
   get 'login', to: 'sessions#new'
 
   post 'sessions', to: 'sessions#create'
