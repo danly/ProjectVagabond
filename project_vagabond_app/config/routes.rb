@@ -24,15 +24,15 @@ Rails.application.routes.draw do
 
   get 'cities/:id', to: 'cities#show', as: 'city'
 
-  get 'cities/:id/logs/new', to: "logs#new", as: "new_log"
+  get 'logs/new', to: "logs#new", as: "new_log"
 
-  post 'cities/:id/logs', to: "logs#create", as: "new_log_form"
+  post 'logs', to: "logs#create", as: "new_log_form"
 
-  get 'cities/:id/logs/:log_id', to: "logs#show", as: "city_log"
+  get 'logs/:log_id', to: "logs#show", as: "city_log"
 
-  get 'cities/:id/logs/:log_id/edit', to: 'logs#edit', as: "edit_log"
+  get 'logs/:log_id/edit', to: 'logs#edit', as: "edit_log"
     
-  patch 'cities/:id/logs/:log_id', to: "logs#update", as: 'update_log'
+  patch 'logs/:log_id', to: "logs#update", as: 'update_log'
 
-  delete 'cities/:id/logs/:log_id', to: "logs#delete", as: 'delete_log'
+  delete 'logs/:log_id', to: "logs#delete", as: 'delete_log'
 end

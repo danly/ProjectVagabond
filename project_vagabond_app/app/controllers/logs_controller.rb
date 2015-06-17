@@ -2,15 +2,16 @@ class LogsController < ApplicationController
   def new
     @log = Log.new
     @user = current_user
-    @city = City.find_by(params[:city])
+    # @city = City.find_by(params[:city])
     @cities = City.all
-    @current_city = @user.current_city
+    @city = @user.current_city
     render :new
   end
 
   def create
     @log = Log.create(log_params)
-    redirect_to city_path
+    @city = City.find_by city: @log.city
+    redirect_to city_path(@city.id)
   end
 
   def show
