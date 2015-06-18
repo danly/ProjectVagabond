@@ -15,9 +15,9 @@
     <div>
   <% if log.city == @city.city %>
     <%= link_to "/logs/#{log.id}" do %>
-      <h3><%= log.title %></h3><br>
+      <h3><%= truncate(log.title, length: 100) %></h3><br>
   <% end %>
-      <%= log.body %>
+      <%= truncate(log.body, length: 1000) { link_to "More after the Jump", "/logs/#{log.id}" } %>
     </div>
   <% end %>
 <% end %>
