@@ -14,9 +14,9 @@
 <% @logs.each do |log| %>
     <div>
   <% if log.city == @city.city %>
-    <%= link_to [@city, log] do %>
+    <%= link_to "/logs/#{log.id}" do %>
       <h3><%= log.title %></h3><br>
-    <% end %>
+  <% end %>
       <%= log.body %>
     </div>
   <% end %>

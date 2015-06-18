@@ -25,7 +25,7 @@
 		<div class="col-md-12">
 			<% @logs.each do |log| %>
 		  		<% if log.author == @user.email %>
-		    		<%= link_to [@user, log] do %>
+		    		<%= link_to "/logs/#{log.id}" do %>
 		      		<h3><%= log.title %></h3>
 		      		<%= log.created_at.strftime("%m/%d/%Y") %><br>
 		      		<%= log.city %><br>
