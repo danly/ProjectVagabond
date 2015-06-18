@@ -5,6 +5,6 @@
   <h4><%= @log.title %></h4> <small><%= @log.author %> <%= @log.created_at %></small><br>
   <p><%= @log.body %></p>
   <% if @log.author == @user.email %>
-  <%= button_to "Delete", delete_log_path, method: :delete, class: "btn btn-danger" %>
+  <%= button_to "Delete", delete_log_path, method: :delete, data: { confirm: 'Are you really super sure?' }, class: "btn btn-danger" %>
   <%= button_to "Edit", edit_log_path, method: :get, class: "btn btn-warning" %>
   <% end %>
