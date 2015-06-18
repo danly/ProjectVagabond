@@ -1,4 +1,11 @@
 <%= form_for @log do |f| %>
+<% if @log.errors.any? %>
+    <% flash.each do |key, value| %>
+      <div class="<%= flash_class(key) %>">
+        <%= value %>
+      </div>
+    <% end %>
+  <% end %>
 
   <div>
     <%= f.text_field :title, placeholder: "Title" %><br>
