@@ -27,10 +27,16 @@
 		  		<% if log.author == @user.email %>
 		    		<%= link_to "/logs/#{log.id}" do %>
 		      		<h3><%= log.title %></h3>
-		      		<%= log.created_at.strftime("%m/%d/%Y") %><br>
-		      		<%= log.city %><br>
 		    	<% end %>
-		      		<%= log.body %>
+		    			<% @cities.each do |city| %>
+		    				<% if city.city == log.city %>
+					    			<%= link_to "/cities/#{city.id}" do %>
+					      			<strong><%= log.city %></strong><br>
+					      		<% end %>
+					      <% end %>
+					    <% end %>
+					    Posted: <%= log.created_at.strftime("%m/%d/%Y") %><br> <br>
+					    <%= log.body %>
 	  		<% end %>
 		<% end %>
 	</div>
