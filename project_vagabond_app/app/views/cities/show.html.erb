@@ -11,7 +11,7 @@
 </div>      
 
 
-<% @logs.each do |log| %>
+<% @logs.first(10).each do |log| %>
     <div>
   <% if log.city == @city.city %>
     <%= link_to "/logs/#{log.id}" do %>
