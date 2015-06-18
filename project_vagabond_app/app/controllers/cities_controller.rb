@@ -6,7 +6,7 @@ class CitiesController < ApplicationController
   end
 
   def show
-    @logs = Log.all
+    @logs = Log.all.order("logs.created_at desc")
   	@city = City.find(params[:id])
   	render :show
   end
