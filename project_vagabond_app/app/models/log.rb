@@ -1,4 +1,5 @@
 class Log < ActiveRecord::Base
-  belongs_to :users
-  belongs_to :cities
+	validates :title, presence: true, length: { maximum: 200 }
+  	belongs_to :users
+ 	belongs_to :cities
 end
