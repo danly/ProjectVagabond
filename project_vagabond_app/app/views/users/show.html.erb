@@ -26,7 +26,7 @@
 			<% @logs.each do |log| %>
 		  		<% if log.author == @user.email %>
 		    		<%= link_to "/logs/#{log.id}" do %>
-		      		<h3><%= log.title %></h3>
+		      		<h3><%= truncate(log.title, length: 100) %></h3>
 		    	<% end %>
 		    			<% @cities.each do |city| %>
 		    				<% if city.city == log.city %>
@@ -36,7 +36,7 @@
 					      <% end %>
 					    <% end %>
 					    Posted: <%= log.created_at.strftime("%m/%d/%Y") %><br>
-					    <%= log.body %>
+					    <%= truncate(log.body, length: 1000) { link_to "More after the Jump", "/logs/#{log.id}" } %>
 	  		<% end %>
 		<% end %>
 	</div>
