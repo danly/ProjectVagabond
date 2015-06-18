@@ -22,11 +22,13 @@ class LogsController < ApplicationController
 
   def edit
     @log = Log.find(params[:log_id])
+    @city = City.find_by city: @log.city
     render :edit
   end
 
   def update
     log = Log.find(params[:log_id])
+    @city = City.find_by city: @log.city
     log.update(log_params)
     redirect_to log_path(log)
   end
