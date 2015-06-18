@@ -1,6 +1,19 @@
 <body id="form_page">
 	<div class="col-xs-6 col-xs-offset-3" id="form">
 	<%= bootstrap_form_for @log, url: new_log_form_path, method: "post" do |f| %>
+  <% if @log.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@log.errors.count, "error") %> prohibited
+        this log from being saved:
+      </h2>
+      <ul>
+        <% @log.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
 
   <div>
     <%= f.text_field :title, placeholder: "Title" %><br>
