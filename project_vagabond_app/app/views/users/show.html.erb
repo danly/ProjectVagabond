@@ -9,10 +9,12 @@
 				<% end %>
 
 		</div>
+		<% if @user == current_user %>
 		<div class="col-md-8">
 			<h2 class="h2profile">Welcome, <%= @user.first_name %>.  How is the weather in <%= @user.current_city %>?</h2>
 				<%= button_to "Edit Profile", edit_user_path(current_user), method: :get, class: "btn btn-warning" %>
 		</div>
+		<% end %>
 		<div class="row">
 			&nbsp;
 		</div>
